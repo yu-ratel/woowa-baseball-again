@@ -4,20 +4,7 @@ import InputView from './view/InputView.js';
 class App {
   async play() {
     this.#startGuide();
-    this.#requestNumberBaseballValue();
-  }
-
-  randomNumberGenerator(min, max, count) {
-    const numbers = [];
-    while (numbers.length < count) {
-      const number = Random.pickNumberInRange(min, max);
-      if (numbers.includes(number)) {
-        continue;
-      }
-      numbers.push(number);
-    }
-
-    return numbers;
+    await this.#requestNumberBaseballValue();
   }
 
   #startGuide() {
@@ -25,7 +12,7 @@ class App {
   }
 
   async #requestNumberBaseballValue() {
-    InputView.numberBaseballValue();
+    await InputView.numberBaseballValue();
   }
 }
 
