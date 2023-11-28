@@ -1,8 +1,10 @@
 import { Random, Console } from '@woowacourse/mission-utils';
+import InputView from './view/InputView.js';
 
 class App {
   async play() {
     this.#startGuide();
+    this.#requestNumberBaseballValue();
   }
 
   randomNumberGenerator(min, max, count) {
@@ -19,7 +21,11 @@ class App {
   }
 
   #startGuide() {
-    Console.print('숫자 야구 게임을 시작합니다.\n');
+    Console.print('숫자 야구 게임을 시작합니다.');
+  }
+
+  async #requestNumberBaseballValue() {
+    InputView.numberBaseballValue();
   }
 }
 
