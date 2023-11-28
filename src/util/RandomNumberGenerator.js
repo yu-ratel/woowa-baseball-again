@@ -8,7 +8,7 @@ const RandomNumberGenerator = {
       if (numbers.includes(number)) {
         continue;
       }
-      number.push(number);
+      numbers.push(number);
     }
     return numbers;
   },
